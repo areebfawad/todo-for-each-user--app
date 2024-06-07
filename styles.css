@@ -1,0 +1,84 @@
+/* styles.css */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; background-image: url(image\ 1.jpeg); background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 60px #00ff00;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2, h3 {
+    text-shadow: 0 0 10px #00ff00;text-align: center;
+}
+
+input, button {
+    width: 98%;
+    padding: 10px;
+    margin: 10px 0;
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+input:focus, button:hover {
+    background: #00ff00;
+    color: #0f0f0f;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+button {
+    cursor: pointer;width: 100%;
+}
+
+#notes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#notes li {
+    background: #1f1f1f;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #00ff00;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex; /* Add display flex */
+    justify-content: space-between; /* Add space between items */
+    align-items: center; /* Center items vertically */
+}
+
+#notes li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+}
+
+#notes li strong {
+    color: #1eff00;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
