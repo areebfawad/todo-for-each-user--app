@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Todo App</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div id="login-page">
             <h2>Login</h2>
-            <input type="email" id="email" placeholder="Enter your email or phone number">
+            <input type="email" id="email" placeholder="Enter your email">
             <input type="password" id="password" placeholder="Enter your password">
             <button onclick="login()">Login</button>
         </div>
@@ -19,9 +19,34 @@
             <button onclick="logout()">Logout</button>
             <h3>Your Notes</h3>
             <input type="text" id="note-input" placeholder="Enter a note">
+            <select id="category-input">
+                <option value="Select category" disabled selected>Select category</option>
+                <option value="Homework">Homework</option>
+                <option value="Exams">Exams</option>
+                <option value="Projects">Projects</option>
+                <option value="Extracurricular">Extracurricular</option>
+                <option value="Personal">Personal</option>
+            </select>
             <button onclick="addNote()">Add Note</button>
+            <h3>Filter by Category</h3>
+            <select id="filter-category" onchange="filterNotes()">
+                <option value="All">All</option>
+                <option value="Homework">Homework</option>
+                <option value="Exams">Exams</option>
+                <option value="Projects">Projects</option>
+                <option value="Extracurricular">Extracurricular</option>
+                <option value="Personal">Personal</option>
+            </select>
             <div id="notes">
                 <ul id="notes-list"></ul>
+            </div>
+        </div>
+        <div id="admin-page" class="hidden">
+            <h2>Admin Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+            <h3>All Users' Notes</h3>
+            <div id="notes">
+                <ul id="admin-notes-list"></ul>
             </div>
         </div>
     </div>
